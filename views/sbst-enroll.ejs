@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/logo.png" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css"
+    />
+    <link rel="stylesheet" href="sweetalert2.min.css" />
+    <link rel="stylesheet" href="css/sbst.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>SBST | Enrollment</title>
+  </head>
+  <body>
+    <section>
+      <!-- navbar -->
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <!-- Left-aligned logo and text -->
+          <a class="navbar-brand d-flex align-items-center">
+            <img src="images/logo.png" alt="sbst-logo" class="me-2" />
+            <span class="sbst-logo-text"
+              >Southern Baptist School of Theology Inc.</span
+            >
+          </a>
+
+          <!-- Hamburger menu for smaller screens -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Right-aligned navigation items with even spacing -->
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item mx-2">
+                <a
+                  class="nav-link ajax-link"
+                  href="/sbst-home"
+                  data-page="sbst-home"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item dropdown mx-2">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Programs
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item"><h5>Ministries Programs:</h5></a>
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="/masters-of-divinity">
+                      <h5>Masters of Divinity</h5>
+                      <small class="text-muted"
+                        >Major in Theology and Missiology</small
+                      >
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="/major-in-biblical-studies-and-church-planting"
+                    >
+                      <h5>Masters of Arts and Ministry</h5>
+                      <small class="text-muted"
+                        >Major in Biblical Studies and Church Planting</small
+                      >
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="/major-in-preaching-administration-counseling"
+                    >
+                      <h5>Masters of Theology</h5>
+                      <small class="text-muted"
+                        >Major in Preaching; Administration; Counseling</small
+                      >
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="/major-in-children-and-youth-ministry"
+                    >
+                      <h5>Masters of Christian Education</h5>
+                      <small class="text-muted"
+                        >Major in Children and Youth Ministry</small
+                      >
+                    </a>
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="/ministry-in-christian-music"
+                    >
+                      <h5>Ministry in Christian Music</h5>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="/associate-in-ministerial-training"
+                    >
+                      <h5>Associate in Ministerial Training</h5>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="/theological-education-by-extension"
+                    >
+                      <h5>Theological Education by Extension</h5>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/community-outreach-program">
+                      <h5>Community Outreach Program</h5>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item mx-2">
+                <a
+                  class="nav-link ajax-link"
+                  href="/sbst-sched"
+                  data-page="sbst-sched"
+                  >Schedules</a
+                >
+              </li>
+              <li class="nav-item mx-2">
+                <a
+                  class="nav-link ajax-link"
+                  href="/sbst-about"
+                  data-page="sbst-about"
+                  >About</a
+                >
+              </li>
+              <li class="nav-item mx-2">
+                <a
+                  class="nav-link ajax-link"
+                  href="/sbst-apply"
+                  data-page="sbst-apply"
+                  >Apply</a
+                >
+              </li>
+              <li class="nav-item mx-2">
+                <a
+                  class="nav-link ajax-link"
+                  href="/sbst-login"
+                  data-page="sbst-login"
+                  >Login</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="enroll-content">
+        <div class="enroll-container">
+          <span class="enroll-header"> SBST ENROLLMENT FORM </span>
+          <div class="form-container">
+            <% if(messages.success){ %>
+            <div
+              class="alert alert-success alert-dismissible fade show"
+              role="alert"
+            >
+              <%= messages.success %>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="alert"
+                aria-label="Close"
+              ></button>
+            </div>
+            <% } %> <% if(messages.error){ %>
+            <div
+              class="alert alert-danger alert-dismissible fade show"
+              role="alert"
+            >
+              <%= messages.error %>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="alert"
+                aria-label="Close"
+              ></button>
+            </div>
+            <% } %>
+            <form id="enrollForm" action="/sbst-add-enroll" method="post">
+              <!-- Personal Information -->
+              <span class="info-title">Personal Information</span>
+              <div class="row mb-3 mt-3">
+                <div class="col-md-4">
+                  <div class="form-floating mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="fname"
+                      id="fname"
+                      placeholder="name@example.com"
+                      required
+                    />
+                    <label for="fname">First Name</label>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-floating mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="lname"
+                      id="lname"
+                      placeholder="name@example.com"
+                      required
+                    />
+                    <label for="floatingInput">Last Name</label>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-floating mb-3">
+                    <input
+                      type="number"
+                      class="form-control"
+                      name="age"
+                      id="age"
+                      placeholder="name@example.com"
+                      required
+                    />
+                    <label for="floatingInput">Age</label>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-floating mb-3">
+                    <select
+                      class="form-select"
+                      name="gender"
+                      id="gender"
+                      aria-label="Floating label select example"
+                      required
+                    >
+                      <option hidden>Choose here</option>
+                      <option id="male" value="Male">Male</option>
+                      <option id="female" value="Female">Female</option>
+                    </select>
+                    <label for="floatingSelect">Gender</label>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-floating mb-3">
+                    <select
+                      class="form-select"
+                      name="civilstatus"
+                      id="civilstatus"
+                      aria-label="Floating label select example"
+                      required
+                    >
+                      <option hidden>Choose here</option>
+                      <option id="1" value="Single">Single</option>
+                      <option id="2" value="Married">Married</option>
+                      <option id="3" value="Widowed">Widowed</option>
+                    </select>
+                    <label for="floatingSelect">Civil Status</label>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-floating mb-3">
+                    <select
+                      class="form-select"
+                      name="educ"
+                      id="educ"
+                      aria-label="Floating label select example"
+                      required
+                    >
+                      <option hidden>Choose here</option>
+                      <option id="1" value="Elemantary">Elementary</option>
+                      <option id="2" value="Highschool">Highschool</option>
+                      <option id="3" value="Undergraduate">
+                        Undergraduate
+                      </option>
+                      <option id="4" value="Bachelors">Bachelors</option>
+                      <option id="5" value="Masteral">Masteral</option>
+                    </select>
+                    <label for="floatingSelect"
+                      >Highest Educational Attainment</label
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- Contact Details -->
+              <span class="info-title">Contact Details</span>
+              <div class="row mb-3 mt-3">
+                <div class="col-md-4">
+                  <div class="form-floating mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="address"
+                      id="address"
+                      placeholder="name@example.com"
+                      required
+                    />
+                    <label for="floatingInput">Home Address</label>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-floating mb-3">
+                    <input
+                      type="email"
+                      class="form-control"
+                      name="email"
+                      id="email"
+                      placeholder="name@example.com"
+                      required
+                    />
+                    <label for="floatingInput">Email Address</label>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-floating mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="number"
+                      id="number"
+                      placeholder="09XXXXXXXXX"
+                      maxlength="11"
+                      required
+                      oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                    />
+                    <label for="number">Mobile Number</label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Church Information -->
+              <span class="info-title">Church Information</span>
+              <div class="row mb-3 mt-3">
+                <div class="col-md-6">
+                  <div class="form-floating mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="religion"
+                      id="religion"
+                      placeholder="name@example.com"
+                      required
+                    />
+                    <label for="floatingInput">Denomination/Religion</label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-floating mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="church"
+                      id="church"
+                      placeholder="name@example.com"
+                      required
+                    />
+                    <label for="floatingInput">Name of Church</label>
+                  </div>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-md-6">
+                  <div class="form-floating mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="churchaddr"
+                      id="churchaddr"
+                      placeholder="name@example.com"
+                      required
+                    />
+                    <label for="floatingInput">Church Address/E-mail</label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-floating mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="ministry"
+                      id="ministry"
+                      placeholder="name@example.com"
+                      required
+                    />
+                    <label for="floatingInput">Profession/Ministry</label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Course Enrollment -->
+              <span class="info-title">Course Enrollment</span>
+              <div class="row mb-3 mt-3">
+                <!-- <label for="desc" class="desc">For Masters Degree, maximum of 15 units (5 subjects)</label>
+                <label for="desc" class="desc">For Bachelors Degree, maximum of 18 units (6 subjects)</label> -->
+                <label for="inputState" class="form-label"
+                  >Degree/Program</label
+                >
+                <div class="col-md-6 mb-3">
+                  <select id="degreeSelect" name="degree" class="form-select" required>
+                    <option hidden <%= !selectedDeg ? "selected" : "" %>>Choose...</option>
+                    <% degrees.forEach(degree => { %>
+                      <option value="<%= degree.id %>" <%= selectedDeg == degree.id ? "selected" : "" %>>
+                        <%= degree.deg_name %>
+                      </option>
+                    <% }); %>
+                  </select>
+                </div>
+                <div class="col-md-12">
+                  <table id="courseTable" class="table table-striped table-bordered text-center table-responsive">
+                    <thead>
+                      <tr>
+                        <th>Course</th>
+                        <th>Unit</th>
+                        <th>Instructor</th>
+                        <th>Day</th>
+                        <th>Time</th>
+                        <th>Select</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <% if (selectedDeg && courses.length > 0) { %>
+                        <% courses.forEach(course => { %>
+                          <tr>
+                            <td><%= course.course_name %></td>
+                            <td><%= course.unit %></td>
+                            <td><%= course.instructor %></td>
+                            <td><%= course.day %></td>
+                            <td><%= course.time %></td>
+                            <td>
+                              <input type="checkbox" name="course_ids[]" value="<%= course.id %>">
+                            </td>
+                          </tr>
+                        <% }); %>
+                      <% } else { %>
+                        <tr>
+                          <td colspan="6" class="text-muted">Please select a degree to view courses</td>
+                        </tr>
+                      <% } %>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <!-- Assessment and Schedule of Fees -->
+              <span class="info-title">ASSESSMENT AND SCHEDULE OF FEES </span>
+              <div class="row mb-3 mt-3">
+                <div class="col-md-12 mb-3">
+                  <div class="fees-details">
+                    <span class="fees-title">
+                      Souther Baptist School of Theology, Inc.
+                    </span>
+                    <span class="fees-subtitle">
+                      Metrobank Account Number: <b><u>641-7-641-004428</u></b>
+                    </span>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <table
+                    class="table table-striped table-bordered table-responsive"
+                  >
+                    <thead>
+                      <tr>
+                        <th class="text-center">Enrollment Fees</th>
+                        <th class="text-center">Amount</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <b>Registration</b> <i> (P250 - Southern Baptist, P350 - Non-Southern Baptist)</i>
+                        </td>
+                        <td class="user-fee">
+                          <span>₱</span
+                          ><input type="number" class="form-control" placeholder="Add an amount" name="regfee" id="regfee" required/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><b>Tuition</b> <i>(P300 per unit)</i></td>
+                        <td class="user-fee">
+                          <span>₱</span
+                          ><input type="number" class="form-control" placeholder="0" name="tuition" id="tuition" required readonly/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><b>Identification Card</b> <i>(P150)</i></td>
+                        <td class="user-fee">
+                          <span>₱</span
+                          ><input type="number" name="idcard" id="idcard" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><b>Thesis 2</b></td>
+                        <td class="user-fee">
+                          <span>
+                            ₱
+                          </span>
+                          <input type="number" class="form-control" placeholder="Add an amount" name="thesis" id="thesis" required/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><b>Miscellaneous:</b> <i>(P300)</i></td>
+                        <td class="user-fee">
+                          <span>₱</span
+                          ><input
+                            type="number"
+                            name="misc"
+                            id="misc"
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-end"><b>Total Amount:</b></td>
+                          <td class="user-fee">
+                            <b>₱</b><input type="text" id="total_display" name="total_display" readonly />
+                            <!--  Hidden input to send raw number to DB -->
+                            <input type="hidden" id="total_fee" name="total_fee" />
+                          </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="form-button">
+                <button class="btn btn-primary" type="submit" id="savebtn">
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+      <!-- Footer Bottom Row -->
+      <div class="copyright row">
+        <div class="copyright-content col-md-12 text-center pt-2 mt-2">
+          <p>
+            <span
+              >Copyright &copy;
+              <script>
+                document.write(new Date().getFullYear());
+              </script>
+              All rights reserved. Southern Baptist School of Theology
+              Inc.</span
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script src="sweetalert2.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/sbst.js"></script>
+  </body>
+</html>
