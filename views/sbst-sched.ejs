@@ -104,22 +104,7 @@
                       </tr>
                   </thead>
                   <tbody>
-                    <% if (typeof result !== 'undefined' && Array.isArray(result)) { %>
-                        <% result.forEach(course => { %>
-                            <tr>
-                                <td><%= course.course_name %></td>
-                            <td><%= course.instructor %></td>
-                            <td><%= course.unit %></td>
-                            <td><%= course.day %></td>
-                            <td><%= course.time %></td>
-                            </tr>
-                        <% }) %>
-                    <% } else { %>
-                        <tr>
-                            <td colspan="2">Unable to load data from the database.</td>
-                        </tr>
-                    <% } %>
-                      <!-- <% result.forEach(course => { %>
+                      <% result.forEach(course => { %>
                           <tr>
                             <td><%= course.course_name %></td>
                             <td><%= course.instructor %></td>
@@ -127,7 +112,7 @@
                             <td><%= course.day %></td>
                             <td><%= course.time %></td>
                           </tr>
-                        <% }); %> -->
+                        <% }); %>
                   </tbody>
               </table>
             </div>
