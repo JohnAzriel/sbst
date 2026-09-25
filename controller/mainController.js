@@ -6,14 +6,21 @@ exports.getHome = (req, res) => {
 };
 
 exports.getSched = (req, res) => {
-  const sql = "SELECT * FROM course";
-  con.query(sql, (err, result) => {
+  db.query("SELECT * FROM courses", (err, result) => {
     if (err) {
-      console.log(err.message);
-      req.flash("error", err.message);
+      console.error("Database error:", err);
+      return res.render("sbst-sched", { result: [] }); // Pass an empty array so forEach doesn't crash
     }
-    res.render("sbst-sched.ejs", { title: "Sched Page", result });
+    res.render("sbst-sched.ejs", { result });
   });
+  // const sql = "SELECT * FROM course";
+  // con.query(sql, (err, result) => {
+  //   if (err) {
+  //     console.log(err.message);
+  //     req.flash("error", err.message);
+  //   }
+  //   res.render("sbst-sched.ejs", { title: "Sched Page", result });
+  // });
 };
 
 exports.getAbout = (req, res) => {
@@ -221,7 +228,7 @@ exports.addEnroll = (req, res) => {
         req.flash("success", "You are Enrolled (no courses selected)!");
         res.redirect("/sbst-enroll");
       }
-    }
+    },
   );
 };
 
